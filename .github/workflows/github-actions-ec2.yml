@@ -31,8 +31,9 @@ jobs:
         working-directory: ./
         run: |
           sudo apt update -y
-          sudo apt install -y nodejs          
+          sudo apt install -y nodejs 
+          cd src
           sudo npm install pm2 -g
           sudo npm i
-          pm2 start server.js
+          pm2 start App.js
           sudo ls
